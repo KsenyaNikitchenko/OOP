@@ -10,11 +10,11 @@ namespace library
     class Book
     {
         private int idBook; //код книги
-        private string author; //автор
-        private string title; //название
-        private string genre; //жанр
-        private string publishingHouse; //издательство
-        private string isbn; //ISBN - международный стандартный книжный номер
+        private string author = string.Empty; //автор
+        private string title = string.Empty; //название
+        private string genre = string.Empty; //жанр
+        private string publishingHouse = string.Empty; //издательство
+        private string isbn = string.Empty; //ISBN - международный стандартный книжный номер
         private int yearOfPublication; //год издания
         private double collateralValue; //залоговая стоимость
         private double rentalCoast; //стоимость проката
@@ -108,34 +108,15 @@ namespace library
         public Book(int idBook, string author, string title, string genre, string publishingHouse,
             string isbn, int yearOfPublication, double collateralValue, double rentalCoast)
         {
-            if (!ValidateIdBook(idBook))
-                throw new ArgumentException("Неверный код книги.");
-            if (!ValidateAuthor(author))
-                throw new ArgumentException("Неверный автор.");
-            if (!ValidateTitle(title))
-                throw new ArgumentException("Неверное название.");
-            if (!ValidateGenre(genre))
-                throw new ArgumentException("Неверный жанр.");
-            if (!ValidatePublishingHouse(publishingHouse))
-                throw new ArgumentException("Неверное издательство.");
-            if (!ValidateIsbn(isbn))
-                throw new ArgumentException("Неверный ISBN.");
-            if (!ValidateYearOfPublication(yearOfPublication))
-                throw new ArgumentException("Неверный год издания.");
-            if (!ValidateCollateralValue(collateralValue))
-                throw new ArgumentException("Неверная залоговая стоимость.");
-            if (!ValidateRentalCoast(rentalCoast))
-                throw new ArgumentException("Неверная стоимость проката.");
-
-            this.idBook = idBook;
-            this.author = author;
-            this.title = title;
-            this.genre = genre;
-            this.publishingHouse = publishingHouse;
-            this.isbn = isbn;
-            this.yearOfPublication = yearOfPublication;
-            this.collateralValue = collateralValue;
-            this.rentalCoast = rentalCoast;
+            IDBook = idBook;
+            Author = author;
+            Title = title;
+            Genre = genre;
+            PublishingHouse = publishingHouse;
+            Isbn = isbn;
+            YearOfPublication = yearOfPublication;
+            CollateralValue = collateralValue;
+            RentalCoast = rentalCoast;
         }
 
         public Book ( string author, string title, string genre, string publishingHouse,
