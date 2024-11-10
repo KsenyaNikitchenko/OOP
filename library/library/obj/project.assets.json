@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kseniya Nikitchenko\\Documents\\Studies\\OOP\\library\\library\\library.csproj",
+      "projectUniqueName": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\library.csproj",
       "projectName": "library",
-      "projectPath": "C:\\Users\\Kseniya Nikitchenko\\Documents\\Studies\\OOP\\library\\library\\library.csproj",
+      "projectPath": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\library.csproj",
       "packagesPath": "C:\\Users\\Kseniya Nikitchenko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kseniya Nikitchenko\\Documents\\Studies\\OOP\\library\\library\\obj\\",
+      "outputPath": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kseniya Nikitchenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
