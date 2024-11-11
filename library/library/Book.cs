@@ -222,18 +222,27 @@ namespace library
             return rentalCost >= 0;
         }
 
-        public void PrintFullInformation()
+        // Метод для вывода краткой версии объекта
+        public override string ToString()
         {
-            Console.WriteLine("Код книги: " + idBook);
-            Console.WriteLine("Автор: " + author);
-            Console.WriteLine("Название: " + title);
-            Console.WriteLine("Жанр: " + genre);
-            Console.WriteLine("Издательство: " + publishingHouse);
-            Console.WriteLine("isbn: " + isbn);
-            Console.WriteLine("Год издания: " + yearOfPublication);
-            Console.WriteLine("Залоговая стоимость: " + collateralValue);
-            Console.WriteLine("Стоимость проката: " + rentalCoast);
+            return $"Title: {Title}, Author: {Author}, CollateralValue: {CollateralValue}, RentalCoast: {RentalCoast}";
         }
 
+        // Метод для вывода полной версии объекта
+        public string ToFullString()
+        {
+            return $"IdBook: {IDBook}, Author: {Author}, Title: {Title}, Genre: {Genre}, PublishingHouse: {PublishingHouse}," +
+                $"ISBN: {Isbn}, YearOfPublication: {YearOfPublication}, CollateralValue: {CollateralValue}, RentalCoast: {RentalCoast}";
+        }
+
+        // Метод для сравнения объектов на равенство
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Book other = (Book)obj;
+            return Isbn == other.Isbn;
+        }
     }
 }
