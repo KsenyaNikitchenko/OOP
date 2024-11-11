@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -22,7 +23,11 @@ namespace library
         public int IDBook
         {
             get { return idBook; }
-            set { }
+            set {
+                if (!ValidateIdBook(value))
+                    throw new ArgumentException("Неверный id.");
+                idBook = value;
+            }
         }
 
         public string Author
@@ -124,6 +129,59 @@ namespace library
                 title, genre, publishingHouse, isbn, yearOfPublication, collateralValue, rentalCoast)
         { }
 
+        //создание объекта из JSON
+        public Book(JsonElement jsonElement)
+        {
+            if (jsonElement.TryGetProperty("idBook", out var idBookElement))
+                IDBook = idBookElement.GetInt32();
+            if (jsonElement.TryGetProperty("author", out var authorElement))
+                Author = authorElement.GetString();
+            if (jsonElement.TryGetProperty("title", out var titleElement))
+                Title = titleElement.GetString();
+            if (jsonElement.TryGetProperty("genre", out var genreElement))
+                Genre = genreElement.GetString();
+            if (jsonElement.TryGetProperty("publishingHouse", out var publishingHouseElement))
+                PublishingHouse = publishingHouseElement.GetString();
+            if (jsonElement.TryGetProperty("isbn", out var isbnElement))
+                Isbn = isbnElement.GetString();
+            if (jsonElement.TryGetProperty("yearOfPublication", out var yearOfPublicationElement))
+                YearOfPublication = yearOfPublicationElement.GetInt32();
+            if (jsonElement.TryGetProperty("collateralValue", out var collateralValueElement))
+                CollateralValue = collateralValueElement.GetDouble();
+            if (jsonElement.TryGetProperty("rentalCoast", out var rentalCoastElement))
+                RentalCoast = rentalCoastElement.GetDouble();
+        }
+
+        //Создание объекта из строки формата "1; Author; Title; Genre; PublishingHouse; 123-4-56789-012-3; 2020; 100.0; 10.0"
+        public Book(string bookString)
+        {
+            var parts = bookString.Split(';');
+            if (parts.Length == 9)
+            {
+                try
+                {
+                    IDBook = int.Parse(parts[0].Trim());
+                    Author = parts[1].Trim();
+                    Title = parts[2].Trim();
+                    Genre = parts[3].Trim();
+                    PublishingHouse = parts[4].Trim();
+                    Isbn = parts[5].Trim();
+                    YearOfPublication = int.Parse(parts[6].Trim());
+                    CollateralValue = double.Parse(parts[7].Trim());
+                    RentalCoast = double.Parse(parts[8].Trim());
+                }
+                catch (FormatException ex)
+                {
+                    throw new ArgumentException("Неверный формат данных.", ex);
+                }
+            }
+            else
+            {
+                throw new ArgumentException("Неверный формат строки.");
+            }
+            
+        }
+
         public static bool ValidateIdBook(int idBook)
         {
             return idBook >= 0;
@@ -147,6 +205,7 @@ namespace library
         public static bool ValidateIsbn(string isbn)
         {
             //ISBN - код из 13 цифр в формате XXX-X-X*(2,5)-X*(3,6)-X
+            //префикс - код страны - код издательства - номер книги в издании - контрольная цифра
             return !string.IsNullOrWhiteSpace(isbn) && 
                 Regex.IsMatch(isbn, @"^\d{3}-\d-\d{2,5}-\d{3,6}-\d$") && isbn.Length==17;
         }
