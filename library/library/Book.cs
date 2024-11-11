@@ -225,7 +225,7 @@ namespace library
         // Метод для вывода краткой версии объекта
         public override string ToString()
         {
-            return $"Title: {Title}, Author: {Author}, CollateralValue: {CollateralValue}, RentalCoast: {RentalCoast}";
+            return $"Title: {Title}, Author: {Author}, ISBN: {Isbn}";
         }
 
         // Метод для вывода полной версии объекта
