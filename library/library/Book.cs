@@ -125,9 +125,17 @@ namespace library
         }
 
         public Book ( string author, string title, string genre, string publishingHouse,
-            string isbn, int yearOfPublication, double collateralValue, double rentalCoast) : this (0, author,
-                title, genre, publishingHouse, isbn, yearOfPublication, collateralValue, rentalCoast)
-        { }
+            string isbn, int yearOfPublication, double collateralValue, double rentalCoast)
+        {
+            Author = author;
+            Title = title;
+            Genre = genre;
+            PublishingHouse = publishingHouse;
+            Isbn = isbn;
+            YearOfPublication = yearOfPublication;
+            CollateralValue = collateralValue;
+            RentalCoast = rentalCoast;
+        }
 
         //создание объекта из JSON
         public Book(JsonElement jsonElement)
