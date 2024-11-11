@@ -44,6 +44,12 @@ namespace library
                 isbn = value;
             }
         }
+        public BookShort(string author, string title, string isbn)
+        {
+            Author = author;
+            Title = title;
+            Isbn = isbn;
+        }
         public static bool ValidateAuthor(string author)
         {
             return !string.IsNullOrWhiteSpace(author);
