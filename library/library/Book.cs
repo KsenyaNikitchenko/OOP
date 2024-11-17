@@ -8,14 +8,11 @@ using System.Threading.Tasks;
 
 namespace library
 {
-    class Book
+    class Book:BookBase
     {
         private int idBook; //код книги
-        private string author = string.Empty; //автор
-        private string title = string.Empty; //название
         private string genre = string.Empty; //жанр
         private string publishingHouse = string.Empty; //издательство
-        private string isbn = string.Empty; //ISBN - международный стандартный книжный номер
         private int yearOfPublication; //год издания
         private double collateralValue; //залоговая стоимость
         private double rentalCoast; //стоимость проката
@@ -27,26 +24,6 @@ namespace library
                 if (!ValidateIdBook(value))
                     throw new ArgumentException("Неверный id.");
                 idBook = value;
-            }
-        }
-
-        public string Author
-        {
-            get { return author; }
-            set {
-                if (!ValidateAuthor(value))
-                    throw new ArgumentException("Неверный автор.");
-                author = value;
-            }
-        }
-
-        public string Title
-        {
-            get { return title; }
-            set {
-                if (!ValidateTitle(value))
-                    throw new ArgumentException("Неверное название.");
-                title = value;
             }
         }
 
@@ -67,16 +44,6 @@ namespace library
                 if (!ValidatePublishingHouse(value))
                     throw new ArgumentException("Неверное издательство.");
                 publishingHouse = value;
-            }
-        }
-
-        public string Isbn
-        {
-            get { return isbn; }
-            set {
-                if (!ValidateIsbn(value))
-                    throw new ArgumentException("Неверный ISBN.");
-                isbn = value;
             }
         }
 
@@ -112,33 +79,29 @@ namespace library
 
         public Book(int idBook, string author, string title, string genre, string publishingHouse,
             string isbn, int yearOfPublication, double collateralValue, double rentalCoast)
+            :base(author,title,isbn)
         {
             IDBook = idBook;
-            Author = author;
-            Title = title;
             Genre = genre;
             PublishingHouse = publishingHouse;
-            Isbn = isbn;
             YearOfPublication = yearOfPublication;
             CollateralValue = collateralValue;
             RentalCoast = rentalCoast;
         }
 
-        public Book ( string author, string title, string genre, string publishingHouse,
+        public Book (string author, string title, string genre, string publishingHouse,
             string isbn, int yearOfPublication, double collateralValue, double rentalCoast)
+            :base(author,title,isbn)
         {
             Author = author;
-            Title = title;
-            Genre = genre;
             PublishingHouse = publishingHouse;
-            Isbn = isbn;
             YearOfPublication = yearOfPublication;
             CollateralValue = collateralValue;
             RentalCoast = rentalCoast;
         }
 
         //создание объекта из JSON
-        public Book(JsonElement jsonElement)
+        public Book(JsonElement jsonElement) : base("a", "b", "123-4-56789-012-3")
         {
             if (jsonElement.TryGetProperty("idBook", out var idBookElement))
                 IDBook = idBookElement.GetInt32();
@@ -160,8 +123,8 @@ namespace library
                 RentalCoast = rentalCoastElement.GetDouble();
         }
 
-        //Создание объекта из строки формата "1; Author; Title; Genre; PublishingHouse; 123-4-56789-012-3; 2020; 100.0; 10.0"
-        public Book(string bookString)
+        //Создание объекта из строки формата "1; Author; Title; Genre; PublishingHouse; 123-4-56789-012-3; 2020; 100,0; 10,0"
+        public Book(string bookString):base("a","b", "123-4-56789-012-3")
         {
             var parts = bookString.Split(';');
             if (parts.Length == 9)
@@ -169,11 +132,11 @@ namespace library
                 try
                 {
                     IDBook = int.Parse(parts[0].Trim());
-                    Author = parts[1].Trim();
-                    Title = parts[2].Trim();
+                    base.Author = parts[1].Trim();
+                    base.Title = parts[2].Trim();
                     Genre = parts[3].Trim();
                     PublishingHouse = parts[4].Trim();
-                    Isbn = parts[5].Trim();
+                    base.Isbn = parts[5].Trim();
                     YearOfPublication = int.Parse(parts[6].Trim());
                     CollateralValue = double.Parse(parts[7].Trim());
                     RentalCoast = double.Parse(parts[8].Trim());
@@ -194,14 +157,6 @@ namespace library
         {
             return idBook >= 0;
         }
-        public static bool ValidateAuthor(string author)
-        {
-            return !string.IsNullOrWhiteSpace(author);
-        }
-        public static bool ValidateTitle(string title)
-        {
-            return !string.IsNullOrWhiteSpace(title);
-        }
         public static bool ValidateGenre(string genre)
         {
             return !string.IsNullOrWhiteSpace(genre);
@@ -209,13 +164,6 @@ namespace library
         public static bool ValidatePublishingHouse(string publishingHouse)
         {
             return !string.IsNullOrWhiteSpace(publishingHouse);
-        }
-        public static bool ValidateIsbn(string isbn)
-        {
-            //ISBN - код из 13 цифр в формате XXX-X-X*(2,5)-X*(3,6)-X
-            //префикс - код страны - код издательства - номер книги в издании - контрольная цифра
-            return !string.IsNullOrWhiteSpace(isbn) && 
-                Regex.IsMatch(isbn, @"^\d{3}-\d-\d{2,5}-\d{3,6}-\d$") && isbn.Length==17;
         }
         public static bool ValidateYearOfPublication(int yearOfPublication)
         {
@@ -229,13 +177,6 @@ namespace library
         {
             return rentalCost >= 0;
         }
-
-        // Метод для вывода краткой версии объекта
-        public override string ToString()
-        {
-            return $"Title: {Title}, Author: {Author}, ISBN: {Isbn}";
-        }
-
         // Метод для вывода полной версии объекта
         public string ToFullString()
         {
@@ -243,14 +184,5 @@ namespace library
                 $"ISBN: {Isbn}, YearOfPublication: {YearOfPublication}, CollateralValue: {CollateralValue}, RentalCoast: {RentalCoast}";
         }
 
-        // Метод для сравнения объектов на равенство
-        public override bool Equals(object obj)
-        {
-            if (obj == null || GetType() != obj.GetType())
-                return false;
-
-            Book other = (Book)obj;
-            return Isbn == other.Isbn;
-        }
     }
 }
