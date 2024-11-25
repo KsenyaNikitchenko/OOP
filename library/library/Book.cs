@@ -10,22 +10,13 @@ namespace library
 {
     class Book:BookBase
     {
-        private int idBook; //код книги
+        
         private string genre = string.Empty; //жанр
         private string publishingHouse = string.Empty; //издательство
         private int yearOfPublication; //год издания
         private double collateralValue; //залоговая стоимость
         private double rentalCoast; //стоимость проката
 
-        public int IDBook
-        {
-            get { return idBook; }
-            set {
-                if (!ValidateIdBook(value))
-                    throw new ArgumentException("Неверный id.");
-                idBook = value;
-            }
-        }
 
         public string Genre
         {
@@ -79,9 +70,8 @@ namespace library
 
         public Book(int idBook, string author, string title, string genre, string publishingHouse,
             string isbn, int yearOfPublication, double collateralValue, double rentalCoast)
-            :base(author,title,isbn)
+            :base(idBook,author,title,isbn)
         {
-            IDBook = idBook;
             Genre = genre;
             PublishingHouse = publishingHouse;
             YearOfPublication = yearOfPublication;
@@ -101,45 +91,40 @@ namespace library
         }
 
         //создание объекта из JSON
-        public Book(JsonElement jsonElement) : base("a", "b", "123-4-56789-012-3")
+        public static Book FromJson(JsonElement jsonElement)
         {
-            if (jsonElement.TryGetProperty("idBook", out var idBookElement))
-                IDBook = idBookElement.GetInt32();
-            if (jsonElement.TryGetProperty("author", out var authorElement))
-                Author = authorElement.GetString();
-            if (jsonElement.TryGetProperty("title", out var titleElement))
-                Title = titleElement.GetString();
-            if (jsonElement.TryGetProperty("genre", out var genreElement))
-                Genre = genreElement.GetString();
-            if (jsonElement.TryGetProperty("publishingHouse", out var publishingHouseElement))
-                PublishingHouse = publishingHouseElement.GetString();
-            if (jsonElement.TryGetProperty("isbn", out var isbnElement))
-                Isbn = isbnElement.GetString();
-            if (jsonElement.TryGetProperty("yearOfPublication", out var yearOfPublicationElement))
-                YearOfPublication = yearOfPublicationElement.GetInt32();
-            if (jsonElement.TryGetProperty("collateralValue", out var collateralValueElement))
-                CollateralValue = collateralValueElement.GetDouble();
-            if (jsonElement.TryGetProperty("rentalCoast", out var rentalCoastElement))
-                RentalCoast = rentalCoastElement.GetDouble();
+            int idBook = jsonElement.GetProperty("IdBook").GetInt32();
+            string author = jsonElement.GetProperty("Author").GetString();
+            string title = jsonElement.GetProperty("Title").GetString();
+            string genre = jsonElement.GetProperty("Genre").GetString();
+            string publishingHouse = jsonElement.GetProperty("PublishingHouse").GetString();
+            string isbn = jsonElement.GetProperty("Isbn").GetString();
+            int yearOfPublication = jsonElement.GetProperty("YearOfPublication").GetInt32();
+            double collateralValue = jsonElement.GetProperty("CollateralValue").GetDouble();
+            double rentalCoast = jsonElement.GetProperty("RentalCoast").GetDouble();
+
+            return new Book(idBook, author, title, genre, publishingHouse, isbn, yearOfPublication, collateralValue, rentalCoast);
         }
 
         //Создание объекта из строки формата "1; Author; Title; Genre; PublishingHouse; 123-4-56789-012-3; 2020; 100,0; 10,0"
-        public Book(string bookString):base("a","b", "123-4-56789-012-3")
+        public static Book FromString(string bookString)
         {
             var parts = bookString.Split(';');
             if (parts.Length == 9)
             {
                 try
                 {
-                    IDBook = int.Parse(parts[0].Trim());
-                    base.Author = parts[1].Trim();
-                    base.Title = parts[2].Trim();
-                    Genre = parts[3].Trim();
-                    PublishingHouse = parts[4].Trim();
-                    base.Isbn = parts[5].Trim();
-                    YearOfPublication = int.Parse(parts[6].Trim());
-                    CollateralValue = double.Parse(parts[7].Trim());
-                    RentalCoast = double.Parse(parts[8].Trim());
+                    int idBook = int.Parse(parts[0].Trim());
+                    string author = parts[1].Trim();
+                    string title = parts[2].Trim();
+                    string genre = parts[3].Trim();
+                    string publishingHouse = parts[4].Trim();
+                    string isbn = parts[5].Trim();
+                    int yearOfPublication = int.Parse(parts[6].Trim());
+                    double collateralValue = double.Parse(parts[7].Trim());
+                    double rentalCoast = double.Parse(parts[8].Trim());
+
+                    return new Book(idBook, author, title, genre, publishingHouse, isbn, yearOfPublication, collateralValue, rentalCoast);
                 }
                 catch (FormatException ex)
                 {
@@ -153,10 +138,6 @@ namespace library
             
         }
 
-        public static bool ValidateIdBook(int idBook)
-        {
-            return idBook >= 0;
-        }
         public static bool ValidateGenre(string genre)
         {
             return !string.IsNullOrWhiteSpace(genre);
@@ -180,7 +161,7 @@ namespace library
         // Метод для вывода полной версии объекта
         public string ToFullString()
         {
-            return $"IdBook: {IDBook}, Author: {Author}, Title: {Title}, Genre: {Genre}, PublishingHouse: {PublishingHouse}," +
+            return $"IdBook: {IdBook}, Author: {Author}, Title: {Title}, Genre: {Genre}, PublishingHouse: {PublishingHouse}," +
                 $"ISBN: {Isbn}, YearOfPublication: {YearOfPublication}, CollateralValue: {CollateralValue}, RentalCoast: {RentalCoast}";
         }
 

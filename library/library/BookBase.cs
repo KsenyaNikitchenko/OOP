@@ -10,9 +10,21 @@ namespace library
 {
     class BookBase
     {
+        private int idBook; //код книги
         private string author = string.Empty; //автор
         private string title = string.Empty; //название
         private string isbn = string.Empty; //ISBN - международный стандартный книжный номер
+
+        public int IdBook
+        {
+            get { return idBook; }
+            set
+            {
+                if (!ValidateIdBook(value))
+                    throw new ArgumentException("Неверный id.");
+                idBook = value;
+            }
+        }
 
         public string Author
         {
@@ -45,12 +57,26 @@ namespace library
                 isbn = value;
             }
         }
-        public BookBase(string author, string title, string isbn)
+        public BookBase(int idBook, string author, string title, string isbn)
+        {
+            IdBook=idBook;
+            Author = author;
+            Title = title;
+            Isbn = isbn;
+        }
+
+        public BookBase( string author, string title, string isbn)
         {
             Author = author;
             Title = title;
             Isbn = isbn;
         }
+
+        public static bool ValidateIdBook(int idBook)
+        {
+            return idBook >= 0;
+        }
+
         public static bool ValidateAuthor(string author)
         {
             return !string.IsNullOrWhiteSpace(author);
