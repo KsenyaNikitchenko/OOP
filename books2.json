@@ -1,0 +1,57 @@
+[
+  {
+    "Genre": "Детектив",
+    "PublishingHouse": "Бомбора",
+    "YearOfPublication": 2024,
+    "CollateralValue": 900,
+    "RentalCoast": 100,
+    "IdBook": 2,
+    "Author": "Ричард Осман",
+    "Title": "Клуб убийств по четвергам",
+    "Isbn": "978-5-00169-903-3"
+  },
+  {
+    "Genre": "Бизнес",
+    "PublishingHouse": "Эксмо",
+    "YearOfPublication": 2024,
+    "CollateralValue": 1000,
+    "RentalCoast": 100,
+    "IdBook": 3,
+    "Author": "Клейсон Джордж Сэмюэль",
+    "Title": "Самый богатый человек в Вавилоне (львы)",
+    "Isbn": "978-5-04-174811-1"
+  },
+  {
+    "Genre": "Детектив",
+    "PublishingHouse": "Эксмо",
+    "YearOfPublication": 2021,
+    "CollateralValue": 300,
+    "RentalCoast": 25,
+    "IdBook": 5,
+    "Author": "Агата Кристи",
+    "Title": "Убийства по алфавиту",
+    "Isbn": "978-5-98765-210-3"
+  },
+  {
+    "Genre": "Детектив",
+    "PublishingHouse": "Эксмо",
+    "YearOfPublication": 2023,
+    "CollateralValue": 300,
+    "RentalCoast": 25,
+    "IdBook": 4,
+    "Author": "Майк Омер",
+    "Title": "Внутри убийцы",
+    "Isbn": "978-5-04-105557-8"
+  },
+  {
+    "Genre": "",
+    "PublishingHouse": "Эксмо",
+    "YearOfPublication": 2022,
+    "CollateralValue": 300,
+    "RentalCoast": 30,
+    "IdBook": 6,
+    "Author": "Агата Кристи",
+    "Title": "Десять негритят",
+    "Isbn": "978-5-04-103497-9"
+  }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "IdBook":1,
+        "Author":"Агата Кристи",
+        "Title":"Убийства по алфавиту",
+        "Genre":"Детектив",
+        "PublishingHouse":"Эксмо",
+        "Isbn":"978-5-98765-210-3",
+        "YearOfPublication":2021,
+        "CollateralValue":300.0,
+        "RentalCoast":25.0
+    },
+    {
+        "IdBook":2,
+        "Author":"Ричард Осман",
+        "Title":"Клуб убийств по четвергам",
+        "Genre":"Детектив",
+        "PublishingHouse":"Бомбора",
+        "Isbn":"978-5-00169-903-3",
+        "YearOfPublication":2024,
+        "CollateralValue":900.0,
+        "RentalCoast":100.0
+    },
+    {
+        "IdBook":3,
+        "Author":"Клейсон Джордж Сэмюэль",
+        "Title":"Самый богатый человек в Вавилоне (львы)",
+        "Genre":"Бизнес",
+        "PublishingHouse":"Эксмо",
+        "Isbn":"978-5-04-174811-1",
+        "YearOfPublication":2024,
+        "CollateralValue":1000.0,
+        "RentalCoast":100.0
+    },
+    {
+        "IdBook":5,
+        "Author":"Мэттью Макконахи",
+        "Title":"Зелёный свет",
+        "Genre":"Биография",
+        "PublishingHouse":"Азбука",
+        "Isbn":"978-5-389-19099-3",
+        "YearOfPublication":2021,
+        "CollateralValue":1500.0,
+        "RentalCoast":250.0
+    },
+    {
+        "IdBook":4,
+        "Author":"Майк Омер",
+        "Title":"Внутри убийцы",
+        "Genre":"Детектив",
+        "PublishingHouse":"Эксмо",
+        "Isbn":"978-5-04-105557-8",
+        "YearOfPublication":2023,
+        "CollateralValue":300.0,
+        "RentalCoast":25.0
+    }
+]

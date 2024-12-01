@@ -31,11 +31,20 @@ namespace library
             Console.WriteLine(book3.ToFullString());
             Console.WriteLine("Проверка на равенство: " + book2.Equals(book3));
             //Console.WriteLine("Проверка на равенство: " + book2 == book3);
+            //string bookinfo = "1; Author; Title; Genre; PublishingHouse; 123-4-56789-012-3; 2020; 100,3; 10";
+            //Book book4 = Book.FromString(bookinfo);
+            //Console.WriteLine(book4.CollateralValue);
 
-
-            string bookinfo = "1; Author; Title; Genre; PublishingHouse; 123-4-56789-012-3; 2020; 100,3; 10";
-            Book book4 = Book.FromString(bookinfo);
-            Console.WriteLine(book4.CollateralValue);
+            string filePath = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\books.json";
+            BookRepJSON repJson =new BookRepJSON(filePath);
+            string path= "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\books2.json";
+            List<Book> books = repJson.GetKNShortList(3, 2);
+            repJson.Replace(5, book3);
+            repJson.Add(book2);
+            repJson.Remove(5);
+            Console.WriteLine(repJson.GetCount());
+            Console.WriteLine(repJson.GetBookById(2)?.ToString());
+            repJson.WriteAll(path);
         }
     }
 }
