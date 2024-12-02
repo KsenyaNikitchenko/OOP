@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "YamlDotNet": {
               "target": "Package",
               "version": "[16.2.1, )"

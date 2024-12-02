@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "aCkF8AFELik=",
+  "dgSpecHash": "vNnb5LVHcxo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\library.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Kseniya Nikitchenko\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Kseniya Nikitchenko\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Kseniya Nikitchenko\\.nuget\\packages\\npgsql\\9.0.1\\npgsql.9.0.1.nupkg.sha512",
     "C:\\Users\\Kseniya Nikitchenko\\.nuget\\packages\\yamldotnet\\16.2.1\\yamldotnet.16.2.1.nupkg.sha512"
   ],
   "logs": []

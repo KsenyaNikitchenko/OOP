@@ -3,24 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookrepdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookrepdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookrepyaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookrepyaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookrepjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookrepjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookrepyaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookrepyaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,62 +44,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs",
+              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:03:12.269Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BakingInvoiceForm.cs",
+              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs",
+              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T08:34:21.088Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookRepDB.cs",
+              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookRepDB.cs",
+              "RelativeDocumentMoniker": "library\\BookRepDB.cs",
+              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookRepDB.cs*",
+              "RelativeToolTip": "library\\BookRepDB.cs*",
+              "ViewState": "AgIAACUAAAAAAAAAAAAhwEwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:56:12.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "BookRepYAML.cs",
               "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookRepYAML.cs",
               "RelativeDocumentMoniker": "library\\BookRepYAML.cs",
               "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookRepYAML.cs",
               "RelativeToolTip": "library\\BookRepYAML.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAhwBwAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T19:23:37.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\Program.cs",
-              "RelativeDocumentMoniker": "library\\Program.cs",
-              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\Program.cs*",
-              "RelativeToolTip": "library\\Program.cs*",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwDAAAABiAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "BookFileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookFileRepository.cs",
+              "RelativeDocumentMoniker": "library\\BookFileRepository.cs",
+              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookFileRepository.cs",
+              "RelativeToolTip": "library\\BookFileRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T13:26:13.209Z",
+              "WhenOpened": "2024-12-02T07:09:16.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "BookRepJSON.cs",
               "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookRepJSON.cs",
               "RelativeDocumentMoniker": "library\\BookRepJSON.cs",
               "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookRepJSON.cs",
               "RelativeToolTip": "library\\BookRepJSON.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwFgAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T12:51:34.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\Program.cs",
+              "RelativeDocumentMoniker": "library\\Program.cs",
+              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\Program.cs",
+              "RelativeToolTip": "library\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T13:26:13.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BookBase.cs",
               "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookBase.cs",
               "RelativeDocumentMoniker": "library\\BookBase.cs",
               "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookBase.cs",
               "RelativeToolTip": "library\\BookBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T14:39:37.151Z"
+              "WhenOpened": "2024-11-11T14:39:37.151Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\Book.cs",
               "RelativeDocumentMoniker": "library\\Book.cs",
@@ -93,7 +160,8 @@
               "RelativeToolTip": "library\\Book.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAkwEAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T13:27:27.931Z"
+              "WhenOpened": "2024-09-30T13:27:27.931Z",
+              "EditorCaption": ""
             }
           ]
         }
