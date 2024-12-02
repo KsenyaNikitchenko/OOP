@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace library
 {
-    abstract class BookFileRepository
+    abstract class BookFileRepository: IBookRepository
     {
         protected string filePath;
         protected List<Book> booksList;
@@ -57,7 +57,7 @@ namespace library
             }
         }
         // Удалить элемент списка по ID
-        public void Remove(int id)
+        public void Delete(int id)
         {
             Book? bookFromList = booksList.FirstOrDefault(b => b.IdBook == id);
             if (bookFromList != null)

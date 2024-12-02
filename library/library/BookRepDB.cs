@@ -11,7 +11,7 @@ namespace library
             dbConn = DatabaseConnection.GetInstance(connection);
         }
         //Получение объекта по ID
-        public Book? GetById(int id)
+        public Book? GetBookById(int id)
         {
             string sql = "select * from Books where idBook=@id";
             using (NpgsqlCommand command = dbConn.CreateCommand(sql))

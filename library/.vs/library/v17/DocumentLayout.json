@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\bookrepdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|solutionrelative:library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -16,9 +20,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBEE2535-6DD4-4FFE-9D1D-5EF726C85032}|library\\library.csproj|c:\\users\\kseniya nikitchenko\\documents\\github\\oop\\library\\library\\bookfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -48,16 +49,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BakingInvoiceForm.cs",
-              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs",
-              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\3a531547-889a-41fc-b0c7-60409d6091fe_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.1fe\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\BakingInvoiceForm.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DatabaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\DatabaseConnection.cs",
+              "RelativeDocumentMoniker": "library\\DatabaseConnection.cs",
+              "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\DatabaseConnection.cs",
+              "RelativeToolTip": "library\\DatabaseConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T08:34:21.088Z",
-              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+              "WhenOpened": "2024-12-02T10:33:20.808Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -67,7 +68,7 @@
               "RelativeDocumentMoniker": "library\\BookRepDB.cs",
               "ToolTip": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\BookRepDB.cs",
               "RelativeToolTip": "library\\BookRepDB.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDYAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwGIAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T07:56:12.081Z",
               "EditorCaption": ""
@@ -113,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\Program.cs",
               "RelativeDocumentMoniker": "library\\Program.cs",
@@ -139,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\Book.cs",
               "RelativeDocumentMoniker": "library\\Book.cs",
@@ -152,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Kseniya Nikitchenko\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\7bc60fc6-bce9-42b9-af7e-e7414c973730_\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439.zip.730\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439\\cooking\\cooking\\Form1.cs",

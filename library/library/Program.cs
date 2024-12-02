@@ -52,7 +52,7 @@ namespace library
             //BookRepYAML repYAML1 = new BookRepYAML(yamlFilePath2);
 
             string connect = "Server=localhost; Port=5432; UserID=postgres; Password=postpass; Database=Library";
-            BookRepDB repDB = new BookRepDB(connect);
+            BookRepDBAdapter repDB = new BookRepDBAdapter(connect);
             List<Book> books = repDB.GetKNShortList(2, 2);
             //repDB.Add(book2);
             //repDB.Replace(2, book3);
