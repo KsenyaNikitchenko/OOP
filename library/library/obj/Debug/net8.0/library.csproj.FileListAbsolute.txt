@@ -28,3 +28,6 @@ C:\Users\Kseniya Nikitchenko\Documents\GitHub\OOP\library\library\obj\Debug\net8
 C:\Users\Kseniya Nikitchenko\Documents\GitHub\OOP\library\library\obj\Debug\net8.0\library.pdb
 C:\Users\Kseniya Nikitchenko\Documents\GitHub\OOP\library\library\obj\Debug\net8.0\library.genruntimeconfig.cache
 C:\Users\Kseniya Nikitchenko\Documents\GitHub\OOP\library\library\obj\Debug\net8.0\ref\library.dll
+C:\Users\Kseniya Nikitchenko\Documents\GitHub\OOP\library\library\bin\Debug\net8.0\YamlDotNet.dll
+C:\Users\Kseniya Nikitchenko\Documents\GitHub\OOP\library\library\obj\Debug\net8.0\library.csproj.AssemblyReference.cache
+C:\Users\Kseniya Nikitchenko\Documents\GitHub\OOP\library\library\obj\Debug\net8.0\library.csproj.Up2Date

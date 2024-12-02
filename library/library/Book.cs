@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace library
 {
@@ -67,6 +61,8 @@ namespace library
                 rentalCoast = value;
             }
         }
+
+        public Book():base() { }
 
         public Book(int idBook, string author, string title, string genre, string publishingHouse,
             string isbn, int yearOfPublication, double collateralValue, double rentalCoast)

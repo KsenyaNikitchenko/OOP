@@ -1,50 +1,39 @@
-﻿using System.Text.Encodings.Web;
-using System.Text.Json;
-using System.Text.Unicode;
+﻿using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace library
 {
-    class BookRepJSON
+    class BookRepYAML
     {
         private string filePath;
         private List<Book> books;
-        public BookRepJSON(string filePath)
+
+        public BookRepYAML(string filePath)
         {
             this.filePath = filePath;
-            books = ReadAll();
+            books= ReadAll(filePath);
         }
-        //Чтение всех значений из файла
-        public List<Book> ReadAll()
-        {
+        public static List<Book> ReadAll(string filePath) {
             if (!File.Exists(filePath))
-               throw new FileNotFoundException("Данный файл не найден.");
+                throw new FileNotFoundException("Данный файл не найден.");
 
-            string json = File.ReadAllText(filePath);
-            using(JsonDocument doc= JsonDocument.Parse(json))
-            {
-                List<Book> booksList = new List<Book>();
-                foreach (JsonElement element in doc.RootElement.EnumerateArray())
-                {
-                    booksList.Add(Book.FromJson(element));
-                }
-                return booksList;
-            }
+            var deserializer = new DeserializerBuilder().Build();
+
+            string yaml = File.ReadAllText(filePath);
+            return deserializer.Deserialize<List<Book>>(yaml);
         }
         // Запись всех значений в файл
         public void WriteAll(string path)
         {
-            var options = new JsonSerializerOptions 
-            { 
-                WriteIndented = true,
-                Encoder=JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic)
-            };
-            string jsonString = JsonSerializer.Serialize(books, options);
-            File.WriteAllText(path, jsonString);
+            var serializer = new SerializerBuilder().Build();
+
+            string yaml = serializer.Serialize(books);
+            File.WriteAllText(path, yaml);
         }
         //Получение объекта по ID
-        public Book? GetBookById(int id) 
+        public Book? GetBookById(int id)
         {
-            return books.FirstOrDefault(b=>b.IdBook==id);
+            return books.FirstOrDefault(b => b.IdBook == id);
         }
         // Получить список k по счету n объектов класса short
         public List<Book> GetKNShortList(int k, int n)
@@ -54,7 +43,7 @@ namespace library
         // Сортировать элементы по выбранному полю
         public List<Book> SortByYearOfPublication()
         {
-            return books.OrderBy(b=>b.YearOfPublication).ToList();
+            return books.OrderBy(b => b.YearOfPublication).ToList();
         }
         // Добавить объект в список (сформировать новый ID)
         public void Add(Book book)
@@ -66,8 +55,9 @@ namespace library
         // Заменить элемент списка по ID
         public void Replace(int id, Book book)
         {
-            Book? bookFromList=books.FirstOrDefault(b=>b.IdBook==id);
-            if (bookFromList != null) {
+            Book? bookFromList = books.FirstOrDefault(b => b.IdBook == id);
+            if (bookFromList != null)
+            {
                 bookFromList.Author = book.Author;
                 bookFromList.Title = book.Title;
                 bookFromList.Genre = book.Genre;
@@ -79,14 +69,15 @@ namespace library
             }
         }
         // Удалить элемент списка по ID
-        public void Remove(int id) {
-            Book? bookFromList=books.FirstOrDefault(b=>b.IdBook== id);
-            if (bookFromList != null){
+        public void Remove(int id)
+        {
+            Book? bookFromList = books.FirstOrDefault(b => b.IdBook == id);
+            if (bookFromList != null)
+            {
                 books.Remove(bookFromList);
             }
         }
         // Получить количество элементов
         public int GetCount() { return books.Count; }
-
     }
 }

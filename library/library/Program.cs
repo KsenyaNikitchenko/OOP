@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.Json;
+﻿using System.Text.Json;
 namespace library
 {
     class Program
@@ -35,16 +34,22 @@ namespace library
             //Book book4 = Book.FromString(bookinfo);
             //Console.WriteLine(book4.CollateralValue);
 
-            string filePath = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\books.json";
-            BookRepJSON repJson =new BookRepJSON(filePath);
-            string path= "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\books2.json";
+            string jsonFilePath1 = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\booksList.json";
+            BookRepJSON repJson =new BookRepJSON(jsonFilePath1);
+            string jsonFilePath2 = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\booksListWrite.json";
             List<Book> books = repJson.GetKNShortList(3, 2);
             repJson.Replace(5, book3);
             repJson.Add(book2);
             repJson.Remove(5);
             Console.WriteLine(repJson.GetCount());
             Console.WriteLine(repJson.GetBookById(2)?.ToString());
-            repJson.WriteAll(path);
+            repJson.WriteAll(jsonFilePath2);
+
+            string yamlFilePath1 = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\booksList.yaml";
+            string yamlFilePath2 = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\booksListWrite.yaml";
+            BookRepYAML repYAML = new BookRepYAML(yamlFilePath1);
+            repYAML.WriteAll(yamlFilePath2);
+            BookRepYAML repYAML1 = new BookRepYAML(yamlFilePath2);
         }
     }
 }

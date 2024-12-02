@@ -1,0 +1,49 @@
+-     IdBook: 2
+      Author: Харуки Мураками
+      Title: Норверский лес
+      Genre: Детектив
+      PublishingHouse: Эксмо
+      Isbn: 978-5-04-094467-5
+      YearOfPublication: 2021
+      CollateralValue: 500.0
+      RentalCoast: 50.0
+
+-     IdBook: 3
+      Author: Кен Моги
+      Title: Икигай. Смысл жизни по-японски
+      Genre: Популярная психология
+      PublishingHouse: Азбука
+      Isbn: 978-5-389-13359-4
+      YearOfPublication: 2021
+      CollateralValue: 500.0
+      RentalCoast: 60.0
+
+-     IdBook: 4
+      Author: Сорен Свейструп
+      Title: Каштановый человечек
+      Genre: Детектив
+      PublishingHouse: Эксмо
+      Isbn: 978-5-04-158263-0
+      YearOfPublication: 2022
+      CollateralValue: 300.0
+      RentalCoast: 25.0
+
+-     IdBook: 5
+      Author: Агата Кристи
+      Title: Убийство на поле для гольфа
+      Genre: Детектив
+      PublishingHouse: Эксмо
+      Isbn: 978-5-04-104541-8
+      YearOfPublication: 2023
+      CollateralValue: 300.0
+      RentalCoast: 25.0
+
+-     IdBook: 1
+      Author: "Агата Кристи"
+      Title: "Убийство в 'Восточном экспрессе'"
+      Genre: "Детектив"
+      PublishingHouse: "Эксмо"
+      Isbn: "978-5-04-099247-9"
+      YearOfPublication: 2020
+      CollateralValue: 15.99
+      RentalCoast: 3.99

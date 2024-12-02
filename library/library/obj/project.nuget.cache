@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EfjJgzzOS48=",
+  "dgSpecHash": "aCkF8AFELik=",
   "success": true,
   "projectFilePath": "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\library\\library\\library.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kseniya Nikitchenko\\.nuget\\packages\\yamldotnet\\16.2.1\\yamldotnet.16.2.1.nupkg.sha512"
+  ],
   "logs": []
 }
