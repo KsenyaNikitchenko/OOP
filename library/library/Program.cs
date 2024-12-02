@@ -53,9 +53,9 @@ namespace library
 
             string connect = "Server=localhost; Port=5432; UserID=postgres; Password=postpass; Database=Library";
             BookRepDB repDB = new BookRepDB(connect);
-            
+            List<Book> books = repDB.GetKNShortList(2, 2);
             //repDB.Add(book2);
-            repDB.Replace(2, book3);
+            //repDB.Replace(2, book3);
             Console.WriteLine(repDB.GetCount());
         }
     }
