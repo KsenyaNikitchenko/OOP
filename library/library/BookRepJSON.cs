@@ -4,12 +4,10 @@ using System.Text.Unicode;
 
 namespace library
 {
-    class BookRepJSON:BookFileRepository
+    class BookRepJSON : IFileStrategy
     {
-        public BookRepJSON(string filePath):base(filePath) { }
-        
         //Чтение всех значений из файла
-        public override List<Book> ReadAll()
+        public List<Book> ReadAll(string filePath)
         {
             if (!File.Exists(filePath))
                throw new FileNotFoundException("Данный файл не найден.");
@@ -26,7 +24,7 @@ namespace library
             }
         }
         // Запись всех значений в файл
-        public override void WriteAll(string path)
+        public void WriteAll(string path, List<Book> booksList)
         {
             var options = new JsonSerializerOptions 
             { 

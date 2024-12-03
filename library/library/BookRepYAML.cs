@@ -3,11 +3,10 @@ using YamlDotNet.Serialization.NamingConventions;
 
 namespace library
 {
-    class BookRepYAML:BookFileRepository
+    class BookRepYAML : IFileStrategy
     {
-
-        public BookRepYAML(string filePath):base(filePath) { }
-        public override List<Book> ReadAll() {
+        public List<Book> ReadAll(string filePath)
+        {
             if (!File.Exists(filePath))
                 throw new FileNotFoundException("Данный файл не найден.");
 
@@ -17,7 +16,7 @@ namespace library
             return deserializer.Deserialize<List<Book>>(yaml);
         }
         // Запись всех значений в файл
-        public override void WriteAll(string path)
+        public void WriteAll(string path, List<Book> booksList)
         {
             var serializer = new SerializerBuilder().Build();
 

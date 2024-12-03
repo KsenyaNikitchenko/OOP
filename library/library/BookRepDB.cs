@@ -70,8 +70,8 @@ namespace library
         public void Add(Book book)
         {
 
-            string sql = "INSERT INTO Books (author, title, genre, publishingHouse, isbn, yearOfPublication, collateralValue, rentalCoast) " +
-                "VALUES (@author, @title, @genre, @publishingHouse, @isbn, @yearOfPublication, @collateralValue, @rentalCoast)";
+            string sql = "insert into Books (author, title, genre, publishingHouse, isbn, yearOfPublication, collateralValue, rentalCoast) " +
+                "values (@author, @title, @genre, @publishingHouse, @isbn, @yearOfPublication, @collateralValue, @rentalCoast)";
             using (NpgsqlCommand command = dbConn.CreateCommand(sql))
             {
                 command.Parameters.Add("author", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Author;

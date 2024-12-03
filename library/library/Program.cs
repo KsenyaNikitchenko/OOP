@@ -12,7 +12,7 @@ namespace library
             //Console.WriteLine(book1.Genre);
 
             Book book2 = new Book("Агата Кристи", "Десять негритят", "Детектив", "Эксмо", "978-5-04-103497-9", 2022, 300.00, 30.00);
-            //Console.WriteLine(book1.ToString());
+            //Console.WriteLine(book2.IdBook);
 
             string jsonString = """
                 {"IdBook":2,
@@ -27,14 +27,15 @@ namespace library
                 """;
             JsonElement jsonElement = JsonDocument.Parse(jsonString).RootElement;
             Book book3 = Book.FromJson(jsonElement);
-            Console.WriteLine(book3.ToFullString());
-            Console.WriteLine("Проверка на равенство: " + book2.Equals(book3));
-            //Console.WriteLine("Проверка на равенство: " + book2 == book3);
+            //Console.WriteLine(book3.ToFullString());
+            //Console.WriteLine("Проверка на равенство: " + book2.Equals(book3));
+
             //string bookinfo = "1; Author; Title; Genre; PublishingHouse; 123-4-56789-012-3; 2020; 100,3; 10";
             //Book book4 = Book.FromString(bookinfo);
             //Console.WriteLine(book4.CollateralValue);
 
-            //string jsonFilePath1 = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\booksList.json";
+            
+            string jsonFilePath1 = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\booksList.json";
             //BookRepJSON repJson =new BookRepJSON(jsonFilePath1);
             //string jsonFilePath2 = "C:\\Users\\Kseniya Nikitchenko\\Documents\\GitHub\\OOP\\booksListWrite.json";
             //List<Book> books = repJson.GetKNShortList(3, 2);
@@ -51,12 +52,15 @@ namespace library
             //repYAML.WriteAll(yamlFilePath2);
             //BookRepYAML repYAML1 = new BookRepYAML(yamlFilePath2);
 
+            BookFileRepository fileRep = new BookFileRepository(jsonFilePath1, new BookRepJSON());
+            fileRep.Replace(37,book3);
+            
             string connect = "Server=localhost; Port=5432; UserID=postgres; Password=postpass; Database=Library";
-            BookRepDBAdapter repDB = new BookRepDBAdapter(connect);
-            List<Book> books = repDB.GetKNShortList(2, 2);
+            //BookRepDB repDB = new BookRepDB(connect);
+            //List<Book> books = repDB.GetKNShortList(2, 2);
             //repDB.Add(book2);
             //repDB.Replace(2, book3);
-            Console.WriteLine(repDB.GetCount());
+            //Console.WriteLine(repDB.GetCount());
         }
     }
 }
