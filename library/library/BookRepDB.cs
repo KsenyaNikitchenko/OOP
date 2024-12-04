@@ -40,10 +40,10 @@ namespace library
         {
             List<Book> list = new List<Book>();
 
-            string sql = "select * from Books limit @k offset @n";
+            string sql = "select * from Books limit @n offset @k";
             using (NpgsqlCommand command = dbConn.CreateCommand(sql))
             {
-                command.Parameters.Add("k", NpgsqlTypes.NpgsqlDbType.Integer).Value = k;
+                command.Parameters.Add("k", NpgsqlTypes.NpgsqlDbType.Integer).Value = (k - 1) * n;
                 command.Parameters.Add("n", NpgsqlTypes.NpgsqlDbType.Integer).Value = n;
                 using (NpgsqlDataReader reader = command.ExecuteReader())
                 {

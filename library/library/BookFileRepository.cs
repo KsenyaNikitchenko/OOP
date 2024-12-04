@@ -22,9 +22,10 @@ namespace library
         {
             return strategy.ReadAll(filePath);
         }
-        public void WriteAll(string path)
+        public void WriteAll(string? path = null)
         {
-            strategy.WriteAll(path,booksList);
+            string finalFilePath = path ?? filePath;
+            strategy.WriteAll(finalFilePath, booksList);
         }
         //Получение объекта по ID
         public Book? GetBookById(int id)
@@ -34,7 +35,7 @@ namespace library
         // Получить список k по счету n объектов класса short
         public List<Book> GetKNShortList(int k, int n)
         {
-            return booksList.Skip(k).Take(n).ToList();
+            return booksList.Skip((k - 1) * n).Take(n).ToList();
         }
         // Сортировать элементы по выбранному полю
         public List<Book> SortByYearOfPublication()
@@ -52,7 +53,7 @@ namespace library
             }
             else
                 throw new Exception($"Книга с ISBN {book.Isbn} уже существует.");
-            
+
         }
         // Заменить элемент списка по ID
         public void Replace(int id, Book book)
@@ -60,7 +61,7 @@ namespace library
             Book? bookFromList = booksList.FirstOrDefault(b => b.IdBook == id);
             if (bookFromList != null)
             {
-                if(!booksList.Any(b => b.Isbn == book.Isbn))
+                if (!booksList.Any(b => b.Isbn == book.Isbn))
                 {
                     bookFromList.Author = book.Author;
                     bookFromList.Title = book.Title;

@@ -53,7 +53,8 @@ namespace library
             //BookRepYAML repYAML1 = new BookRepYAML(yamlFilePath2);
 
             BookFileRepository fileRep = new BookFileRepository(jsonFilePath1, new BookRepJSON());
-            fileRep.Replace(37,book3);
+            List<Book> books=fileRep.GetKNShortList(3,2);
+            //fileRep.WriteAll();
             
             string connect = "Server=localhost; Port=5432; UserID=postgres; Password=postpass; Database=Library";
             //BookRepDB repDB = new BookRepDB(connect);
