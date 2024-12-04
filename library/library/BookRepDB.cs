@@ -17,22 +17,24 @@ namespace library
             using (NpgsqlCommand command = dbConn.CreateCommand(sql))
             {
                 command.Parameters.Add("id", NpgsqlTypes.NpgsqlDbType.Integer).Value = id;
-                var reader = command.ExecuteReader();
-                if (reader.Read())
+                using (NpgsqlDataReader reader = command.ExecuteReader())
                 {
-                    return new Book(
-                        reader.GetInt32(0),
-                        reader.GetString(1),
-                        reader.GetString(2),
-                        reader.GetString(3),
-                        reader.GetString(4),
-                        reader.GetString(5),
-                        reader.GetInt32(6),
-                        reader.GetDouble(7),
-                        reader.GetDouble(8)
-                        );
+                    if (reader.Read())
+                    {
+                        return new Book(
+                            reader.GetInt32(0),
+                            reader.GetString(1),
+                            reader.GetString(2),
+                            reader.GetString(3),
+                            reader.GetString(4),
+                            reader.GetString(5),
+                            reader.GetInt32(6),
+                            reader.GetDouble(7),
+                            reader.GetDouble(8)
+                            );
+                    }
+                    else return null;
                 }
-                else return null;
             }
         }
         //Получить список k по счету n объектов класса short
@@ -61,9 +63,9 @@ namespace library
                             reader.GetDouble(8)
                             ));
                     }
+                    reader.Close();
                 }
             }
-
             return list;
         }
         // Добавить объект в список (сформировать новый ID)

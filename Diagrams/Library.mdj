@@ -3113,7 +3113,7 @@
 											"model": {
 												"$ref": "AAAAAAGThj8K8GJqYpw="
 											},
-											"font": "Arial;13;2",
+											"font": "Arial;13;0",
 											"left": 1221,
 											"top": 402,
 											"width": 359,
@@ -3130,7 +3130,7 @@
 											"model": {
 												"$ref": "AAAAAAGThj8UyGJwql0="
 											},
-											"font": "Arial;13;2",
+											"font": "Arial;13;0",
 											"left": 1221,
 											"top": 417,
 											"width": 359,
@@ -6655,8 +6655,7 @@
 								"$ref": "AAAAAAGThjq/5mHbBKI="
 							},
 							"name": "ReadAll",
-							"stereotype": "",
-							"isAbstract": true
+							"stereotype": ""
 						},
 						{
 							"_type": "UMLOperation",
@@ -6675,8 +6674,7 @@
 									"name": "path",
 									"type": "string"
 								}
-							],
-							"isAbstract": true
+							]
 						},
 						{
 							"_type": "UMLOperation",
