@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace library
+﻿namespace library
 {
     class BookFileRepository
     {
@@ -45,7 +39,7 @@ namespace library
         // Добавить объект в список (сформировать новый ID)
         public void Add(Book book)
         {
-            if (!booksList.Any(b => b.Isbn == book.Isbn))
+            if (IsQnique(book))
             {
                 int id = booksList.Count > 0 ? booksList.Max(b => b.IdBook) + 1 : 1;
                 book.IdBook = id;
@@ -61,7 +55,7 @@ namespace library
             Book? bookFromList = booksList.FirstOrDefault(b => b.IdBook == id);
             if (bookFromList != null)
             {
-                if (!booksList.Any(b => b.Isbn == book.Isbn))
+                if (IsQnique(book))
                 {
                     bookFromList.Author = book.Author;
                     bookFromList.Title = book.Title;
@@ -88,5 +82,10 @@ namespace library
         }
         // Получить количество элементов
         public int GetCount() { return booksList.Count; }
+
+        private bool IsQnique(Book book)
+        {
+            return !booksList.Any(b => book.Equals(b));
+        }
     }
 }

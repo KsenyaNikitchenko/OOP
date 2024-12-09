@@ -3,7 +3,7 @@ using System.Data.Common;
 
 namespace library
 {
-    class BookRepDB
+    class BookRepDB:IBookRepository
     {
         private DatabaseConnection dbConn;
         public BookRepDB(string connection)
@@ -71,23 +71,25 @@ namespace library
         // Добавить объект в список (сформировать новый ID)
         public void Add(Book book)
         {
-
             string sql = "insert into Books (author, title, genre, publishingHouse, isbn, yearOfPublication, collateralValue, rentalCoast) " +
                 "values (@author, @title, @genre, @publishingHouse, @isbn, @yearOfPublication, @collateralValue, @rentalCoast)";
-            using (NpgsqlCommand command = dbConn.CreateCommand(sql))
-            {
-                command.Parameters.Add("author", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Author;
-                command.Parameters.Add("title", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Title;
-                command.Parameters.Add("genre", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Genre;
-                command.Parameters.Add("publishingHouse", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.PublishingHouse;
-                command.Parameters.Add("isbn", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Isbn;
-                command.Parameters.Add("yearOfPublication", NpgsqlTypes.NpgsqlDbType.Integer).Value = book.YearOfPublication;
-                command.Parameters.Add("collateralValue", NpgsqlTypes.NpgsqlDbType.Double).Value = book.CollateralValue;
-                command.Parameters.Add("rentalCoast", NpgsqlTypes.NpgsqlDbType.Double).Value = book.RentalCoast;
+            if (IsQnique(book)) {
+                using (NpgsqlCommand command = dbConn.CreateCommand(sql))
+                {
+                    command.Parameters.Add("author", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Author;
+                    command.Parameters.Add("title", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Title;
+                    command.Parameters.Add("genre", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Genre;
+                    command.Parameters.Add("publishingHouse", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.PublishingHouse;
+                    command.Parameters.Add("isbn", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Isbn;
+                    command.Parameters.Add("yearOfPublication", NpgsqlTypes.NpgsqlDbType.Integer).Value = book.YearOfPublication;
+                    command.Parameters.Add("collateralValue", NpgsqlTypes.NpgsqlDbType.Double).Value = book.CollateralValue;
+                    command.Parameters.Add("rentalCoast", NpgsqlTypes.NpgsqlDbType.Double).Value = book.RentalCoast;
 
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
+                }
             }
-
+            else
+                throw new Exception($"Книга с ISBN {book.Isbn} уже существует.");
         }
         // Заменить элемент списка по ID
         public void Replace(int id, Book book)
@@ -95,19 +97,24 @@ namespace library
 
             string sql = "update Books set author=@author, title=@title, genre=@genre, publishingHouse=@publishingHouse, isbn=@isbn," +
                 "yearOfPublication=@yearOfPublication, collateralValue=@collateralValue, rentalCoast=@rentalCoast where idBook=@id";
-            using (NpgsqlCommand command = dbConn.CreateCommand(sql))
+            if (IsQnique(book))
             {
-                command.Parameters.Add("author", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Author;
-                command.Parameters.Add("title", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Title;
-                command.Parameters.Add("genre", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Genre;
-                command.Parameters.Add("publishingHouse", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.PublishingHouse;
-                command.Parameters.Add("isbn", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Isbn;
-                command.Parameters.Add("yearOfPublication", NpgsqlTypes.NpgsqlDbType.Integer).Value = book.YearOfPublication;
-                command.Parameters.Add("collateralValue", NpgsqlTypes.NpgsqlDbType.Double).Value = book.CollateralValue;
-                command.Parameters.Add("rentalCoast", NpgsqlTypes.NpgsqlDbType.Double).Value = book.RentalCoast;
-                command.Parameters.Add("id", NpgsqlTypes.NpgsqlDbType.Integer).Value = id;
-                command.ExecuteNonQuery();
+                using (NpgsqlCommand command = dbConn.CreateCommand(sql))
+                {
+                    command.Parameters.Add("author", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Author;
+                    command.Parameters.Add("title", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Title;
+                    command.Parameters.Add("genre", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Genre;
+                    command.Parameters.Add("publishingHouse", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.PublishingHouse;
+                    command.Parameters.Add("isbn", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Isbn;
+                    command.Parameters.Add("yearOfPublication", NpgsqlTypes.NpgsqlDbType.Integer).Value = book.YearOfPublication;
+                    command.Parameters.Add("collateralValue", NpgsqlTypes.NpgsqlDbType.Double).Value = book.CollateralValue;
+                    command.Parameters.Add("rentalCoast", NpgsqlTypes.NpgsqlDbType.Double).Value = book.RentalCoast;
+                    command.Parameters.Add("id", NpgsqlTypes.NpgsqlDbType.Integer).Value = id;
+                    command.ExecuteNonQuery();
+                }
             }
+            else
+                throw new Exception($"Книга с ISBN {book.Isbn} уже существует.");
 
         }
         // Удалить элемент списка по ID
@@ -127,6 +134,16 @@ namespace library
             using (NpgsqlCommand command = dbConn.CreateCommand(sql))
             {
                 return Convert.ToInt32(command.ExecuteScalar());
+            }
+        }
+
+        private bool IsQnique(Book book)
+        {
+            string sql = "select count(*) from Books where isbn=@isbn";
+            using (NpgsqlCommand command = dbConn.CreateCommand(sql))
+            {
+                command.Parameters.Add("isbn", NpgsqlTypes.NpgsqlDbType.Varchar).Value = book.Isbn;
+                return Convert.ToInt32(command.ExecuteScalar())==0;
             }
         }
     }

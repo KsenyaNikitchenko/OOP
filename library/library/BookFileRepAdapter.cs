@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace library
+﻿namespace library
 {
-    class BookFileRepAdapter
+    class BookFileRepAdapter:IBookRepository
     {
         private BookFileRepository fileRep;
         public BookFileRepAdapter(string filePath, IFileStrategy strategy)
